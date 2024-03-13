@@ -16,10 +16,10 @@ locals {
 }
 
 # Call apply for all k8s files after EKS created
-resource "null_resource" "apply_kubernetes_manifests" {
-  provisioner "local-exec" {
-    command = "kubectl apply -f kubernetes/"
-  }
+# resource "null_resource" "apply_kubernetes_manifests" {
+#   provisioner "local-exec" {
+#     command = "kubectl apply -f kubernetes/"
+#   }
 
-  depends_on = [module.eks]
-}
+#   depends_on = [module.eks]
+# }
