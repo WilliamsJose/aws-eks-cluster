@@ -3,7 +3,7 @@ module "eks" {
   version = "19.15.3"
 
   cluster_name    = local.cluster_name
-  cluster_version = "1.28"
+  cluster_version = "1.29"
 
   vpc_id                         = module.vpc.vpc_id
   subnet_ids                     = module.vpc.private_subnets
@@ -21,6 +21,7 @@ module "eks" {
     one = {
       name = "node-group-1"
 
+      # https://aws.amazon.com/pt/ec2/instance-types/t3/
       instance_types = ["t3.small"]
 
       min_size     = 1
