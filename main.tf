@@ -14,39 +14,6 @@ resource "random_string" "suffix" {
   special = false
 }
 
-module "eks" {
-  source  = "terraform-aws-modules/eks/aws"
-  version = "19.15.3"
-
-  cluster_name    = local.cluster_name
-  cluster_version = "1.27"
-
-  vpc_id                         = module.vpc.vpc_id
-  subnet_ids                     = module.vpc.private_subnets
-  cluster_endpoint_public_access = true
-
-  # TODO add github info
-  tags = {
-    Environment = "Development"
-    GithubRepo  = "YourRepoNameHere"
-    GithubOrg   = "YourOrganizationGitNameHere"
-  }
-
-  # TODO add app configuration pods
-  eks_managed_node_groups = {
-    # Example:
-    # one = {
-    #   name = "node-group-1"
-
-    #   instance_types = ["t3.small"]
-
-    #   min_size     = 1
-    #   max_size     = 3
-    #   desired_size = 2
-    # }
-  }
-}
-
 # Terraform default:
 # https://aws.amazon.com/blogs/containers/amazon-ebs-csi-driver-is-now-generally-available-in-amazon-eks-add-ons/ 
 data "aws_iam_policy" "ebs_csi_policy" {
