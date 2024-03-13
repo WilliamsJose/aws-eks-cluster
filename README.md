@@ -13,7 +13,11 @@ and
 [Manage Kubernetes resources via Terraform](https://developer.hashicorp.com/terraform/tutorials/kubernetes/kubernetes-provider?variants=kubernetes%3Aeks)
 
 ### Requirements 
-- install terraform CLI and aws CLI
+- AWS account
+- Terraform CLI installed
+- AWS CLI installed
+- Kubernetes CLI installed
+- kubectl installed
 - configure aws access keys vars from Security Credentials:
   > export AWS_ACCESS_KEY_ID=[your-key-id]   
   > export AWS_SECRET_ACCESS_KEY=[your-key-secret]
