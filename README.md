@@ -27,3 +27,4 @@ and
   terraform init
   terraform apply
 ```
+> NOTE: kubernetes files starting with "not-" indicates its not necessary if you want to use RDS or external database

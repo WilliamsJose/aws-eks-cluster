@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+data:
+  DB_PASSWORD: "th3pass"
+  DB_NAME: "mydb"

@@ -1,0 +1,11 @@
+# NOTE: files starting with "not-" indicates its not necessary if you want to use RDS or external database
+
+kubectl apply -f kubernetes/not-pvc-db.yaml
+kubectl apply -f kubernetes/not-pv-db.yaml
+kubectl apply -f kubernetes/not-config-map-db.yaml
+kubectl apply -f kubernetes/config-map-app.yaml
+kubectl apply -f kubernetes/not-deployment-db.yaml
+kubectl apply -f kubernetes/not-service-db.yaml
+kubectl apply -f kubernetes/deployment-app.yaml
+kubectl apply -f kubernetes/hpa.yaml
+kubectl apply -f kubernetes/service-app.yaml
