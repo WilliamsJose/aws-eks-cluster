@@ -22,7 +22,8 @@ module "eks" {
       name = "node-group-1"
 
       # https://aws.amazon.com/pt/ec2/instance-types/t3/
-      instance_types = ["t3.small"]
+      instance_types = ["t4g.small"]
+      ami_type       = "AL2_ARM_64"
 
       min_size     = 1
       max_size     = 2
