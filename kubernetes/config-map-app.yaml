@@ -3,9 +3,9 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  DB_HOST: "mysqldbinstance.lalala123.us-east-1.rds.amazonaws.com"
+  DB_HOST: "yourinstancedb.lalala123fakeid.us-east-1.rds.amazonaws.com"
   DB_USER: "root"
-  DB_PASSWORD: "th3pass"
+  DB_PASSWORD: "fake_pa$$word"
   DB_NAME: "mydb"
   DB_PORT: "3306"
   APP_PORT: "3000"
