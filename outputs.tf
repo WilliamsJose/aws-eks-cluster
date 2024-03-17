@@ -18,3 +18,19 @@ output "cluster_name" {
   description = "Kubernetes Cluster Name"
   value       = module.eks.cluster_name
 }
+
+output "vpc_id" {
+  description = "The ID of the VPC"
+  value       = aws_default_vpc.default.id
+}
+
+output "private_subnets" {
+  description = "List of IDs of private subnets"
+  value       = [aws_default_subnet.default_az1_private.id]
+}
+
+output "public_subnets" {
+  description = "List of IDs of public subnets"
+  value       = [aws_default_subnet.default_az1_public.id]
+}
+
